@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data noupdate="1">
+        <!-- Tree view -->
+        <record id="view_prodi_ub_tree" model="ir.ui.view">
+            <field name="name">prodi_ub_tree</field>
+            <field name="model">prodi.ub</field>
+            <field name="type">tree</field>
+            <field name="priority" eval="8" />
+            <field name="arch" type="xml">
+                <tree string="Nama Program Studi">
+                    <field name="name" />
+                </tree>
+            </field>
+        </record>
+        <!-- model.name form view -->
+        <record id="view_prodi_ub_form" model="ir.ui.view">
+            <field name="name">prodi_ub_form</field>
+            <field name="model">prodi.ub</field>
+            <field name="arch" type="xml">
+                <form string="Program Studi">
+                    <sheet>
+                        <group>
+                            <!-- Add your fields here -->
+                            <field name="name" />
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <!-- model.name search view -->
+        <record id="view_prodi_ub_search" model="ir.ui.view">
+            <field name="name">prodi_ub_search</field>
+            <field name="model">prodi.ub</field>
+            <field name="arch" type="xml">
+                <search string="Search Description">
+                    <!-- Add your fields here -->
+                    <field name="name" select="true" />
+                </search>
+            </field>
+        </record>
+        <!-- model.name action window -->
+        <record id="view_prodi_ub_action" model="ir.actions.act_window">
+            <field name="name">prodi_ub_action</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">prodi.ub</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="oe_view_nocontent_create">
+                    <!-- Add Text Here -->
+                </p><p>
+                    <!-- More details about what a user can do with this object will be OK --> 
+                </p>
+            </field>
+        </record>
+        <!-- This Menu Item must have a parent and an action -->
+        <menuitem id="menu_prodi_ub" name="Program Studi" parent="menu_prodi" action="view_prodi_ub_action" sequence="30"/>
+    </data>
+</odoo>

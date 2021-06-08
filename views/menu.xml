@@ -1,0 +1,8 @@
+<!-- This Menu Item must have a parent and an action -->
+<odoo>
+    <data>
+        <!-- Add you code here -->
+        <menuitem id="kelompok_bisa_prodi" name="TI4A" sequence="10"/>
+        <menuitem id="menu_prodi" name="Master Prodi" parent="kelompok_bisa_prodi" sequence="20"/>
+    </data>
+</odoo>
